@@ -22,9 +22,9 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/image', function(req, res) {
 
- let file = fs.createWriteStream(`artistname.jpg`)
+ var file = fs.createWriteStream(`artistname.jpg`)
 
- let stream = request(`https://repostart.s3.amazonaws.com/%2Fartistname.jpg`).pipe(file)
+ var stream = request(`https://repostart.s3.amazonaws.com/%2Fartistname.jpg`).pipe(file)
     stream.on('finish', function() {
       Tesseract.recognize('artistname.jpg')
       .then(function(result){
