@@ -1,4 +1,4 @@
-
+'use strict'
 var express = require('express')
 var app = express()
 var Tesseract = require('tesseract.js')
