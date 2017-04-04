@@ -1,8 +1,9 @@
+
 var express = require('express')
 var app = express()
 var Tesseract = require('tesseract.js')
-const fs = require('fs');
-const request = require('request')
+var fs = require('fs');
+var request = require('request')
 
 //  let file = fs.createWriteStream(`artistname.jpg`)
 
